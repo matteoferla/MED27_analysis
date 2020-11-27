@@ -55,6 +55,7 @@ and not MED14, the stalk.
 ![MED27_5U0P](MED27_5U0P.jpg)
 
 The homology to 5U0P_2 was so low it wasn't a big player in the models. None of the models resolved remotely similarly to it.
+ITasser model 3 has two antiparallel sheets, not 4 and the numbering does not match, nor the helices.
 So this is best ignored.
 
 ### XL-MS
@@ -68,7 +69,7 @@ allows some tentative tests. This assumes that the sections are structurally con
 —which it does not.
 
 Of note is that the MED3 residue 20–27 interaction had to be removed as as these flank a gap (both correspond to residue 14)
-None of the models have a loop at residue 14. Whereas the residue 14 on a loop link is consistent with 5U0P_2 two short helices.
+None of the models have a loop at residue 14 —ITasser 5 has a unstructured loop as opposed to a first helix. Whereas the residue 14 on a loop link is consistent with 5U0P_2 two short helices.
 They all have a straight helix in the models.
 Here are the distances of the CA atoms in Å.
 
@@ -88,3 +89,6 @@ Same for the latter.
 
 Therefore, this dataset is not helpful. Consequently going with ITasser's top ranked pose is the best option.
 
+## Consurf
+
+[Consurf](https://consurf.tau.ac.il/) was then used to add conservation as b-factors.
