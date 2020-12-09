@@ -1,3 +1,60 @@
+## Get header data lazily
+Get chain and name.
+
+    chains = []
+    chain = {}
+    for line in open('Mediator-final-v5.pdb'):
+        if 'COMPND' not in line:
+            pass
+        elif 'MOL_ID' in line:
+            if chain:
+                chains.append(chain)
+                chain = {}
+        elif 'MODULE' in line:
+            chain['module'] = re.search('MODULE\: (.*)\;', line).group(1)
+        elif 'MOLECULE' in line:
+            chain['name'] = re.search('MOLECULE\: (.*)\;', line).group(1)
+        elif 'CHAIN' in line:
+            chain['chain'] = re.search('CHAIN\: (.*)\;', line).group(1)
+        else:
+            raise ValueError(f'What is {line}')
+    else:
+        chains.append(chain)
+    chains
+
+
+
+## RMSD
+This is the other way
+
+    rmsd = pyrosetta.rosetta.core.simple_metrics.metrics.RMSDMetric(ori)
+    print(scorefxn_cart(mid), scorefxn_cart(ori), rmsd.calculate(mid))
+    
+    
+## LocalRelax weights
+
+These are the weights as seen in the [Wang et al 2016](https://elifesciences.org/articles/17219) paper
+
+    # <Set scale_sc_dens_byres="E:0.56,D:0.56,R:0.76,K:0.76,M:0.76,C:0.81,Q:0.81,H:0.81,N:0.81,T:0.81,S:0.81,Y:0.88,W:0.88,A:0.88,F:0.88,P:0.88,I:0.88,L:0.88,V:0.88"/>
+    # is an utter mystery.
+    weights = {"cart_bonded_length": 0.5,
+               "cart_bonded_torsion": 0.5,
+               "cart_bonded_angle": 1.0,
+               "pro_close": 0.0,
+               "fa_sol":0.0,
+               "elec_dens_fast": 30,
+               "rama": 0.0,
+               "rama_prepro": 1.0}
+    
+    scorefxn_local = pyrosetta.create_score_function('ref2015_cart')
+    stm = pyrosetta.rosetta.core.scoring.ScoreTypeManager()
+    for name, value in weights.items():
+        scorefxn_local.set_weight(stm.score_type_from_name(name), value)
+        
+This was not used in the final model.
+
+## I-Tasser
+
 Clean ITasser records.
 
     import os, re
