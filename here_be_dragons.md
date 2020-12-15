@@ -33,8 +33,4 @@ This took way way longer than it was meant to so was killed.
         
     pose.dump_scored_pdb('mediator.fixed.cart_per_chain.pdb', scorefxn_cart)
     
-## Hydrate
-
-This took way way longer than it was meant to so was killed.
-
 

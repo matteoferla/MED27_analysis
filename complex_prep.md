@@ -1,3 +1,5 @@
+# Prep of complex model
+
 ## Start
 
     import pyrosetta
@@ -79,7 +81,6 @@ a restrained FastRelax per chain was done.
         relax.apply(pose)
         
     pose.dump_scored_pdb('mediator.fixed.local2.per_chain.pdb', scorefxn)
-    
-## Humanise
+   
 
-The model is mouse, but I require 
+
