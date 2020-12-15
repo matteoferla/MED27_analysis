@@ -50,3 +50,12 @@ Prior to finding the preprint, I [attempted to make a model](model_attempts.md).
 ## Consurf
 
 [Consurf](https://consurf.tau.ac.il/) was then used to add conservation as b-factors.
+
+## gnomAD
+
+gnomAD has weird transcript issues again. The correct transcript is used in v3: `MED27-201`/`ENST00000292035.10`, which is 311.
+While the longer (326aa) `MED27-207`/`ENST00000651950.1` is wrong.
+There is a single homozygous variant, p.Val203Ile, 
+and only a few heterozygous variants in the `gnomad_r3_controls_and_biobanks` dataset
+(p.Ala2Val, p.Ile5Val, p.Ser26Phe, p.Lys36Arg, p.Ala150Thr, p.Pro174Ala, p.Val203Ile, p.Pro280Leu)
+that a frequency greater than 5e-5.
