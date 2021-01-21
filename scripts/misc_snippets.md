@@ -1,5 +1,5 @@
 ## Get header data lazily
-Get chain and name.
+Get chain and name from the PDB entry:
 
     chains = []
     chain = {}
@@ -25,7 +25,7 @@ Get chain and name.
 
 
 ## RMSD
-This is the other way
+This is the "other way" of doing the RMSD
 
     rmsd = pyrosetta.rosetta.core.simple_metrics.metrics.RMSDMetric(ori)
     print(scorefxn_cart(mid), scorefxn_cart(ori), rmsd.calculate(mid))
