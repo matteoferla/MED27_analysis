@@ -32,7 +32,7 @@ The model is mouse, but I require human.
     Diff.>  ...........
 
 
-This requires data generated in [metadata_assembly](metadata_assembly.md).
+This requires data generated in [metadata_assembly](scripts/metadata_assembly.md).
 
     import json
     

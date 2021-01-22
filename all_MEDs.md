@@ -1,6 +1,6 @@
 # Get data for all MED proteins
 
-> This extends the discussion in [metadata assembly](metadata_assembly.md).
+> This extends the discussion in [metadata assembly](scripts/metadata_assembly.md).
 
 ## Get base data
 
@@ -268,7 +268,7 @@ To download:
 
 Converted to jpg in Illustrator
 
-![gnomAD_missense](colored-gnomAD_missense.jpg)
-![gnomAD_nonsense](colored-gnomAD_nonsense.jpg)
-![clinvar](colored-clinvar.jpg)
-![combined](colored-combined.jpg)
+![gnomAD_missense](images/colored-gnomAD_missense.jpg)
+![gnomAD_nonsense](images/colored-gnomAD_nonsense.jpg)
+![clinvar](images/colored-clinvar.jpg)
+![combined](images/colored-combined.jpg)

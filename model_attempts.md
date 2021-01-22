@@ -50,7 +50,7 @@ but the attractive term of the Lennard-Jones equation and the electrostatic term
 The only structure available is the low resolution _S. pombe_ highly disordered fragment, which is binding to MED17 and MED22 (head)
 and not MED14, the stalk.
 
-![MED27_5U0P](MED27_5U0P.jpg)
+![MED27_5U0P](images/MED27_5U0P.jpg)
 
 The homology to 5U0P_2 was so low it wasn't a big player in the models. None of the models resolved remotely similarly to it.
 ITasser model 3 has two antiparallel sheets, not 4 and the numbering does not match, nor the helices.
