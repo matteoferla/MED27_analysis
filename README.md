@@ -1,5 +1,7 @@
 # MED27_analysis
-Analysis of variants of MED27 (no mutant data is stored here)
+Analysis of variants of MED27.
+
+> The model of the complex is not stored here at present.
 
 MED27 is part of the mediator complex. This is a huge complex.
 ![complex](images/complex.jpg)
@@ -45,6 +47,19 @@ In the final figure human, mouse (because the model is mouse), zebrafish, fruit 
 > See [gene notes](gene.md)
 
 ![exon](images/exon.jpg)
+
+## MED parts
+
+For the choropleth map-like schematic with different MED proteins, the distance of these on the complex was calculated.
+[distances_wide.csv](scripts/distances_wide.csv) contains the min distance in Å between the chains ([notes](https://github.com/matteoferla/pyrosetta_scripts/blob/main/distances_snippets.md))
+
+![dist](images/distance.png)
+
+However, it was used as a guideline to make the picture:
+
+![cartoon](images/cartoon.svg)
+(An alternative approach could have been hexagonal tesselation, but that would have been diabolically hard)
+
 
 ## Other
 
